@@ -1,0 +1,19 @@
+{
+  "name": "@betafcc/dataclass",
+  "version": "0.1.0",
+  "description": "Type-safe dataclass inspired by python 'dataclasses' stdlib",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "dataclass",
+    "dataclasses"
+  ],
+  "author": "Beta Faccion <betafcc@gmail.com> (https://github.com/betafcc)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.3.4000"
+  }
+}
