@@ -47,7 +47,7 @@ export function applyMixins(derivedCtor: any, baseCtors: any[]) {
 // TODO: restrain new props that are in obj.props
 export function replace<T extends Dataclass<any>>(
   obj: T,
-  props: Partial<T['props']> | ((arg: T['props']) => object)
+  props: object | ((arg: T['props']) => object)
 ): T {
   return new (Object.getPrototypeOf(obj)).constructor({
     ...obj.props,
