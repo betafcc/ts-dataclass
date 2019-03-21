@@ -20,7 +20,7 @@ class Point extends Dataclass<{x: number, y: number}> { }
 
 The constructor will be created for you:
 
-![](./prints/point_intellisense.jpg)
+![](prints/point_intellisense.png)
 
 
 More complete example, showing mixins and the `replace` and `pluck` utilities:
@@ -59,8 +59,8 @@ class Geometry extends mixin(Point, Rectangle) {
 
 The type system will detect the new fields:
 
-![](./prints/geometry_intellisense.jpg)
+![](prints/geometry_intellisense.png)
 
 And inherited methods will know which class they belong now:
 
-![](./prints/method_intellisense.jpg)
+![](prints/method_intellisense.png)

@@ -1,6 +1,6 @@
 {
   "name": "@betafcc/dataclass",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Type-safe dataclass inspired by python 'dataclasses' stdlib",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,6 +13,13 @@
   ],
   "author": "Beta Faccion <betafcc@gmail.com> (https://github.com/betafcc)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betafcc/ts-dataclass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/betafcc/ts-dataclass/issues"
+  },
   "devDependencies": {
     "typescript": "^3.3.4000"
   }
