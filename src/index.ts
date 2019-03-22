@@ -55,17 +55,14 @@ export function replace<T extends Dataclass<any>>(
   })
 }
 
-export function pluck
-  <T extends Dataclass<any>, K extends keyof T['props']>
-  (obj: T, key: K)
-  : T['props'][K]
-export function pluck
-  <T extends Dataclass<any>, K extends keyof T['props']>
-  (obj: T, key: K[])
-  : T['props'][K][]
-export function pluck
-  <T extends Dataclass<any>, K extends keyof T['props']>
-  (obj: T, key: K | K[])
-  : T['props'][K] | T['props'][K][] {
-  return obj.props[key];
+export function pluck<T extends Dataclass<any>>(obj: T): T['props']
+export function pluck<T extends Dataclass<any>, K extends keyof T['props']>(obj: T, key: K): T['props'][K]
+export function pluck<T extends Dataclass<any>, K extends keyof T['props']>(obj: T, key: K[]): T['props'][K][]
+export function pluck<T extends Dataclass<any>, K extends keyof T['props']>(obj: T, key?: K | K[]): T['props'][K] | T['props'][K][] {
+  if (key === undefined)
+    return obj.props
+  else if (typeof key === 'string')
+    return obj.props[(key as K)];
+  else
+    return (key as K[]).map(k => obj.props[k])
 }
